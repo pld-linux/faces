@@ -11,6 +11,7 @@ Group:		Applications/Mail
 # this file differs from the one from CVS
 #Source0:	ftp://ftp.cs.indiana.edu/pub/faces/faces/%{name}-%{version}.tar.Z
 Source0:	%{name}-%{version}.tar.Z
+# Source0-md5:	73b1ba54e57bf99f85d3ccf7be95c17d
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-awk.patch
 Patch2:		%{name}-string.patch
