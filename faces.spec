@@ -60,12 +60,12 @@ plik pocztowy, nadzoruj±c podan± kolejkê drukowania, nadzoruj±c
 u¿ytkowników na danym komputerze oraz wykonuj±c inne, wyszczególnione
 czynno¶ci nadzoruj±ce. Pakiet faces zawiera równie¿ narzêdzie s³u¿±ce
 do do³±czania (zeskanowanego, skompresowanego) wizerunku twarzy w
-wiadomo¶ciach pocztowych. Obrazek ten powinien byæ skopmresowany w
+wiadomo¶ciach pocztowych. Obrazek ten powinien byæ skompresowany w
 szczególny sposób, dziêki czemu bêdzie móg³ zostaæ zdekompresowany i
 wy¶wietlony w locie przez program pocztowy. Ta funkcja jest zazwyczaj
 wykorzystywana w systemie obs³ugi poczty exmh.
 
-Nalezy zainstalowaæ faces je¶li pragnie siê wykorzystaæ zdolno¶æ
+Nale¿y zainstalowaæ faces je¶li pragnie siê wykorzystaæ zdolno¶æ
 nadzorowania list bêd±c± cech± tego pakietu. Je¶li chce siê do³±czaæ
 wizerunki twarzy w wiadomo¶ciach poczty elektronicznej, trzeba bêdzie
 równie¿ zainstalowaæ pakiet faces-xface. Je¶li pragnie siê pisaæ
