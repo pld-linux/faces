@@ -1,0 +1,20 @@
+--- faces/x11.c.orig	Mon Apr  7 17:29:53 2003
++++ faces/x11.c	Mon Apr  7 17:30:09 2003
+@@ -17,6 +17,7 @@
+  */
+  
+ #include <stdio.h>
++#include <errno.h>
+ #include <ctype.h>
+ #if ( !defined(mips) && !defined(TOPIX) ) || defined(ultrix)
+ #include <sys/types.h>
+--- faces/compface/compface.h.orig	Mon Apr  7 17:41:28 2003
++++ faces/compface/compface.h	Mon Apr  7 17:41:43 2003
+@@ -17,6 +17,7 @@
+ #include <string.h>
+ #else
+ #include <strings.h>
++#include <errno.h>
+ #endif /* SYSV32 || hpux */
+ #include <fcntl.h>
+ #include <setjmp.h>
