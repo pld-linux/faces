@@ -10,7 +10,7 @@ Patch1:		faces-1.6.1-awk.patch
 Patch2:		faces-1.6.1-string.patch
 Patch3:		faces-1.6.1-fix.patch
 Requires:	libgr-progs
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Faces is a program for visually monitoring a list (typically a list of
