@@ -1,10 +1,11 @@
 Summary:	A list monitor with a visual output
 Summary(de):	Face Saver Datenbank-Tools
 Summary(fr):	Outils pour la base de données de sauvegarde des aspects
+Summary(pl):	Program do wizualnego monitorowania listy
 Summary(tr):	Yüz (face) sunucusu veri tabaný araçlarý
 Name:		faces
 Version:	1.6.1
-Release:	17
+Release:	18
 License:	Freeware
 Group:		Applications/Mail
 Group(de):	Applikationen/Post
@@ -16,6 +17,7 @@ Patch1:		%{name}-awk.patch
 Patch2:		%{name}-string.patch
 Patch3:		%{name}-fix.patch
 BuildRequires:	XFree86-devel
+BuildRequires:	bison
 Requires:	netpbm-progs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -78,6 +80,7 @@ yazýlýmlarýnda belirmesini saðlayabilirsiniz.
 Summary:	Utilities needed by mailers for handling Faces' X-face images
 Summary(de):	Utilities zur Behandlung von X-Face-Headers
 Summary(fr):	Utilitaires pour gérer les en-têtes X-Face 
+Summary(pl):	Narzêdzia potrzebne programom pocztowym do obs³ugi nag³ówków X-Face
 Summary(tr):	X-Face baþlýklarýný iþleme araçlarý
 Group:		Applications/Mail
 Group(de):	Applikationen/Post
@@ -101,6 +104,12 @@ Ce sont des utilitaires pour prendre en charge des en-tête de mail X.
 il sont appelés par les lecteurs de mail pour affciher ces parties de
 message.
 
+%description -l pl xface
+Pakiet faces-xface zawiera narzêdzia potrzebne programom pocztowym do
+wy¶wietlania obrazków zawartych w nag³ówkach X-Face. Kiedy program
+pocztowy czyta z nag³ówka liniê X-Face, uruchamia te narzêdzia ¿eby
+wy¶wietliæ obrazek zawarty w nag³ówku.
+
 %description -l tr xface
 Bu paket. X-Face mektup baþlýklarýný iþleyen araçlarý içerir. Bu
 araçlarý, bir mesajdaki bir yüzü görüntülemek isteyen e-posta
@@ -110,6 +119,7 @@ okuyucularý kullanýr.
 Summary:	The Faces program's library and header files
 Summary(de):	Face-Saver-Library und Header
 Summary(fr):	Bibliothèque et en-tête Face saver
+Summary(pl):	Biblioteka statyczna i plik nag³ówkowy faces
 Summary(tr):	Face sunucu kitaplýðý ve baþlýklarý
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
@@ -128,6 +138,9 @@ Libraries und die Header-Dateien für xface-Entwicklungsarbeiten.
 Environnement de développement xface. Contient les bibliothèques et
 fichiers en-têtes pour faire du développement xface.
 
+%description -l pl devel
+Pakiet zawiera plik nag³ówkowy oraz bibliotekê statyczn±.
+
 %description -l tr devel
 Bu paket, xface geliþtirme ortamýný sunar. Gerekli statik kitaplýklarý
 ve baþlýk dosyalarýný içerir.
@@ -140,6 +153,8 @@ ve baþlýk dosyalarýný içerir.
 %patch3 -p1
 
 %build
+bison address.y -o address.c
+
 %{__make} RPM_OPT_FLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}" -f Makefile.dist x11
 
 %install
@@ -154,11 +169,14 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_includedir},%{_libdir}/faces,%{_mandir}
 
 install compface/compface.h $RPM_BUILD_ROOT%{_includedir}/compface.h
 
+gzip -9nf CHANGES* README TODO
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc *.gz
 %attr(755,root,root) %{_bindir}/compface
 %attr(755,root,root) %{_bindir}/icon2ikon
 %attr(755,root,root) %{_bindir}/ikon2icon
