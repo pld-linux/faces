@@ -123,8 +123,12 @@ Summary(pl):	Biblioteka statyczna i plik nagЁСwkowy faces
 Summary(tr):	Face sunucu kitaplЩПЩ ve baЧlЩklarЩ
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 
 %description devel
 Faces-devel contains the faces program development environment, (i.e.,
