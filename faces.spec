@@ -89,13 +89,13 @@ faces-devel. You'll also need to install the faces package.
 %patch3 -p1
 
 %build
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" -f Makefile.dist x11
+%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS" -f Makefile.dist x11
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_includedir},%{_libdir}/faces,%{_mandir}/man{1,3}}
 
-make -f Makefile.dist \
+%{__make} -f Makefile.dist \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir} \
 	LIBDIR=$RPM_BUILD_ROOT%{_libdir} \
 	MANDIR=$RPM_BUILD_ROOT%{_mandir} \
