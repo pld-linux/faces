@@ -160,14 +160,12 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_includedir},%{_libdir}/faces,%{_mandir}
 
 install compface/compface.h $RPM_BUILD_ROOT%{_includedir}/compface.h
 
-gzip -9nf CHANGES* README TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES* README TODO
 %attr(755,root,root) %{_bindir}/compface
 %attr(755,root,root) %{_bindir}/icon2ikon
 %attr(755,root,root) %{_bindir}/ikon2icon
