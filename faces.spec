@@ -30,6 +30,25 @@ images in email, you'll also need to install the faces-xface package.  If
 you would like to develop xface applications, you'll need to also install
 faces-devel.
 
+%description -l pl
+faces jest programem s³u¿±cym do wizualnego monitorowania listy (zazwyczaj 
+jest to lista nadchodz±cych wiadomo¶ci, lista zadañ w kolejce drukowania
+czy lista u¿ytkowników systemu). Faces dzia³a w kilku ró¿nych trybach:
+nadzoruj±c nadchodz±c± pocztê, nadzoruj±c ca³y plik pocztowy, nadzoruj±c
+podan± kolejkê drukowania, nadzoruj±c u¿ytkowników na danym komputerze oraz
+wykonuj±c inne, wyszczególnione czynno¶ci nadzoruj±ce. Pakiet faces zawiera 
+równie¿ narzêdzie s³u¿±ce do do³±czania (zeskanowanego, skompresowanego) 
+wizerunku twarzy w wiadomo¶ciach pocztowych. Obrazek ten powinien byæ 
+skopmresowany w szczególny sposób, dziêki czemu bêdzie móg³ zostaæ
+zdekompresowany i wy¶wietlony w locie przez program pocztowy. Ta funkcja jest
+zazwyczaj wykorzystywana w systemie obs³ugi poczty exmh.
+
+Nalezy zainstalowaæ faces je¶li pragnie siê wykorzystaæ zdolno¶æ nadzorowania
+list bêd±c± cech± tego pakietu. Je¶li chce siê do³±czaæ wizerunki twarzy w
+wiadomo¶ciach poczty elektronicznej, trzeba bêdzie równie¿ zainstalowaæ
+pakiet faces-xface. Je¶li pragnie siê pisaæ aplikacje dla xface, nale¿y 
+dodatkowo zainstalowaæ pakiet faces-devel.
+
 %package xface
 Requires:	libgr-progs
 Summary:	Utilities needed by mailers for handling Faces' X-face images.
