@@ -5,7 +5,7 @@ Summary(pl):	Program do wizualnego monitorowania listy
 Summary(tr):	Yüz (face) sunucusu veri tabaný araçlarý
 Name:		faces
 Version:	1.6.1
-Release:	19
+Release:	20
 License:	Freeware
 Group:		Applications/Mail
 # this file differs from the one from CVS
