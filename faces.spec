@@ -1,17 +1,22 @@
-Summary:	A list monitor with a visual output.
+Summary:	A list monitor with a visual output
+Summary(de):	Face Saver Datenbank-Tools
+Summary(fr):	Outils pour la base de données de sauvegarde des aspects
+Summary(tr):	Yüz (face) sunucusu veri tabaný araçlarý
 Name:		faces
 Version:	1.6.1
 Release:	17
-Copyright:	freeware
+License:	Freeware
 Group:		Applications/Mail
+Group(de):	Applikationen/Post
 Group(pl):	Aplikacje/Poczta
 Group(pt):	Aplicações/Correio Eletrônico
 Source0:	ftp://ftp.cs.indiana.edu/pub/faces/faces/%{name}-%{version}.tar.Z
-Patch0:		faces-1.6.1-make.patch
-Patch1:		faces-1.6.1-awk.patch
-Patch2:		faces-1.6.1-string.patch
-Patch3:		faces-1.6.1-fix.patch
-Requires:	libgr-progs
+Patch0:		%{name}-make.patch
+Patch1:		%{name}-awk.patch
+Patch2:		%{name}-string.patch
+Patch3:		%{name}-fix.patch
+BuildRequires:	XFree86-devel
+Requires:	netpbm-progs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,6 +36,17 @@ its face image inclusion capability. If you would like to include face
 images in email, you'll also need to install the faces-xface package.
 If you would like to develop xface applications, you'll need to also
 install faces-devel.
+
+%description -l de
+Das faces-Paket ist vor allem für exmh gedacht. Sie können ein
+beliebiges Foto in ein 'face' verwandeln, das dann per E-Mail
+übertragen wird und von exmh und anderen Mail-Programmen erscheint.
+
+%description -l fr
+Le package faces est principalement utilisé avec exmh. Vous pouvez
+prendre une photo de quelque chose et le transformer en une ``face''
+qui peut être transmise dans tous les courriers élctroniques et sera
+visible dans exmh et les autres mailers.
 
 %description -l pl
 faces jest programem s³u¿±cym do wizualnego monitorowania listy
@@ -52,12 +68,22 @@ wizerunki twarzy w wiadomo¶ciach poczty elektronicznej, trzeba bêdzie
 równie¿ zainstalowaæ pakiet faces-xface. Je¶li pragnie siê pisaæ
 aplikacje dla xface, nale¿y dodatkowo zainstalowaæ pakiet faces-devel.
 
+%description -l tr
+Faces paketi daha çok exmh yazýlýmý ile kullanýlmak için
+hazýrlanmýþtýr. Herhangi bir görüntüyü bir 'yüz'e çevirebilir ve bunu
+mektuplara ekleyerek exmh ve benzeri yazýlýmlar kullanan mektup okuma
+yazýlýmlarýnda belirmesini saðlayabilirsiniz.
+
 %package xface
-Requires:	libgr-progs
-Summary:	Utilities needed by mailers for handling Faces' X-face images.
+Summary:	Utilities needed by mailers for handling Faces' X-face images
+Summary(de):	Utilities zur Behandlung von X-Face-Headers
+Summary(fr):	Utilitaires pour gérer les en-têtes X-Face 
+Summary(tr):	X-Face baþlýklarýný iþleme araçlarý
 Group:		Applications/Mail
+Group(de):	Applikationen/Post
 Group(pl):	Aplikacje/Poczta
 Group(pt):	Aplicações/Correio Eletrônico
+Requires:	netpbm-progs
 
 %description xface
 Faces-xface includes the utilities that mail user agent programs need
@@ -65,12 +91,28 @@ to handle X-Face mail headers. When an email program reads the X-face
 header line in an email message, it calls these utilities to display
 the face image included in the message.
 
-You'll need to install faces-xface if you want your mail program to
-display Faces' X-face images.
+%description -l de xface
+Dies sind Dienstprogramme zum Verarbeiten von X-Face-Mail-Headern. Sie
+werden von Mail-Programmen aufgerufen, um ein 'Face' einer Nachricht
+darzustellen.
+
+%description -l fr xface
+Ce sont des utilitaires pour prendre en charge des en-tête de mail X.
+il sont appelés par les lecteurs de mail pour affciher ces parties de
+message.
+
+%description -l tr xface
+Bu paket. X-Face mektup baþlýklarýný iþleyen araçlarý içerir. Bu
+araçlarý, bir mesajdaki bir yüzü görüntülemek isteyen e-posta
+okuyucularý kullanýr.
 
 %package devel
-Summary:	The Faces program's library and header files.
+Summary:	The Faces program's library and header files
+Summary(de):	Face-Saver-Library und Header
+Summary(fr):	Bibliothèque et en-tête Face saver
+Summary(tr):	Face sunucu kitaplýðý ve baþlýklarý
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 
@@ -78,8 +120,17 @@ Group(pl):	Programowanie/Biblioteki
 Faces-devel contains the faces program development environment, (i.e.,
 the static libraries and header files).
 
-If you want to develop Faces applications, you'll need to install
-faces-devel. You'll also need to install the faces package.
+%description -l de devel
+Dies ist die xface-Entwicklungsumgebung. Sie enthält die statischen
+Libraries und die Header-Dateien für xface-Entwicklungsarbeiten.
+
+%description -l fr devel
+Environnement de développement xface. Contient les bibliothèques et
+fichiers en-têtes pour faire du développement xface.
+
+%description -l tr devel
+Bu paket, xface geliþtirme ortamýný sunar. Gerekli statik kitaplýklarý
+ve baþlýk dosyalarýný içerir.
 
 %prep
 %setup -q -n faces
@@ -89,7 +140,7 @@ faces-devel. You'll also need to install the faces package.
 %patch3 -p1
 
 %build
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS" -f Makefile.dist x11
+%{__make} RPM_OPT_FLAGS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}" -f Makefile.dist x11
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -102,10 +153,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_includedir},%{_libdir}/faces,%{_mandir}
 	install
 
 install compface/compface.h $RPM_BUILD_ROOT%{_includedir}/compface.h
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_bindir}/* || :
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man{1,3}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -135,17 +182,16 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/face_update
 %attr(755,root,root) %{_bindir}/faces.sendmail
 %{_libdir}/faces
-%{_mandir}/man1/faces.1.gz
-%{_mandir}/man1/face_update.1.gz
-%{_mandir}/man1/compface.1.gz
-%{_mandir}/man3/compface.3.gz
+%{_mandir}/man1/faces.1*
+%{_mandir}/man1/face_update.1*
+%{_mandir}/man1/compface.1*
 
 %files xface
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/uncompface
 %attr(755,root,root) %{_bindir}/ikon2xbm
-%{_mandir}/man1/uncompface.1.gz
-%{_mandir}/man3/uncompface.3.gz
+%{_mandir}/man1/uncompface.1.*
+%{_mandir}/man3/*
 
 %files devel
 %defattr(644,root,root,755)
