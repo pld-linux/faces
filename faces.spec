@@ -76,7 +76,7 @@ yazýlýmlarýnda belirmesini saðlayabilirsiniz.
 %package xface
 Summary:	Utilities needed by mailers for handling Faces' X-face images
 Summary(de):	Utilities zur Behandlung von X-Face-Headers
-Summary(fr):	Utilitaires pour gérer les en-têtes X-Face 
+Summary(fr):	Utilitaires pour gérer les en-têtes X-Face
 Summary(pl):	Narzêdzia potrzebne programom pocztowym do obs³ugi nag³ówków X-Face
 Summary(tr):	X-Face baþlýklarýný iþleme araçlarý
 Group:		Applications/Mail
@@ -88,23 +88,23 @@ to handle X-Face mail headers. When an email program reads the X-face
 header line in an email message, it calls these utilities to display
 the face image included in the message.
 
-%description -l de xface
+%description xface -l de
 Dies sind Dienstprogramme zum Verarbeiten von X-Face-Mail-Headern. Sie
 werden von Mail-Programmen aufgerufen, um ein 'Face' einer Nachricht
 darzustellen.
 
-%description -l fr xface
+%description xface -l fr
 Ce sont des utilitaires pour prendre en charge des en-tête de mail X.
 il sont appelés par les lecteurs de mail pour affciher ces parties de
 message.
 
-%description -l pl xface
+%description xface -l pl
 Pakiet faces-xface zawiera narzêdzia potrzebne programom pocztowym do
 wy¶wietlania obrazków zawartych w nag³ówkach X-Face. Kiedy program
 pocztowy czyta z nag³ówka liniê X-Face, uruchamia te narzêdzia ¿eby
 wy¶wietliæ obrazek zawarty w nag³ówku.
 
-%description -l tr xface
+%description xface -l tr
 Bu paket. X-Face mektup baþlýklarýný iþleyen araçlarý içerir. Bu
 araçlarý, bir mesajdaki bir yüzü görüntülemek isteyen e-posta
 okuyucularý kullanýr.
@@ -121,18 +121,18 @@ Group:		Development/Libraries
 Faces-devel contains the faces program development environment, (i.e.,
 the static libraries and header files).
 
-%description -l de devel
+%description devel -l de
 Dies ist die xface-Entwicklungsumgebung. Sie enthält die statischen
 Libraries und die Header-Dateien für xface-Entwicklungsarbeiten.
 
-%description -l fr devel
+%description devel -l fr
 Environnement de développement xface. Contient les bibliothèques et
 fichiers en-têtes pour faire du développement xface.
 
-%description -l pl devel
+%description devel -l pl
 Pakiet zawiera plik nag³ówkowy oraz bibliotekê statyczn±.
 
-%description -l tr devel
+%description devel -l tr
 Bu paket, xface geliþtirme ortamýný sunar. Gerekli statik kitaplýklarý
 ve baþlýk dosyalarýný içerir.
 
