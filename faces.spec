@@ -15,6 +15,7 @@ Patch0:		%{name}-make.patch
 Patch1:		%{name}-awk.patch
 Patch2:		%{name}-string.patch
 Patch3:		%{name}-fix.patch
+Patch4:		%{name}-error.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	bison
 Requires:	netpbm-progs
@@ -144,6 +145,7 @@ ve baþlýk dosyalarýný içerir.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 bison address.y -o address.c
