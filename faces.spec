@@ -1,16 +1,16 @@
-Summary: A list monitor with a visual output.
-Name: faces
-Version: 1.6.1
-Release: 16
-Copyright: freeware
-Group: Applications/Internet
-Source: ftp://ftp.cs.indiana.edu/pub/faces/faces/faces-1.6.1.tar.Z
-Patch0: faces-1.6.1-make.patch
-Patch1: faces-1.6.1-awk.patch
-Patch2: faces-1.6.1-string.patch
-Patch3: faces-1.6.1-fix.patch
-Requires: libgr-progs
-BuildRoot: /var/tmp/faces-root
+Summary:	A list monitor with a visual output.
+Name:		faces
+Version:	1.6.1
+Release:	17
+Copyright:	freeware
+Group:		Applications/Mail
+Source:		ftp://ftp.cs.indiana.edu/pub/faces/faces/faces-1.6.1.tar.Z
+Patch0:		faces-1.6.1-make.patch
+Patch1:		faces-1.6.1-awk.patch
+Patch2:		faces-1.6.1-string.patch
+Patch3:		faces-1.6.1-fix.patch
+Requires:	libgr-progs
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 Faces is a program for visually monitoring a list (typically a list of
@@ -31,9 +31,9 @@ you would like to develop xface applications, you'll need to also install
 faces-devel.
 
 %package xface
-Requires: libgr-progs
-Summary: Utilities needed by mailers for handling Faces' X-face images.
-Group: Applications/Internet
+Requires:	libgr-progs
+Summary:	Utilities needed by mailers for handling Faces' X-face images.
+Group:		Applications/Mail
 
 %description xface
 Faces-xface includes the utilities that mail user agent programs need to
@@ -45,8 +45,8 @@ You'll need to install faces-xface if you want your mail program to
 display Faces' X-face images.
 
 %package devel
-Summary: The Faces program's library and header files.
-Group: Development/Libraries
+Summary:	The Faces program's library and header files.
+Group:		Development/Libraries
 
 %description devel
 Faces-devel contains the faces program development environment,
@@ -57,69 +57,71 @@ faces-devel.  You'll also need to install the faces package.
 
 %prep
 %setup -q -n faces
-%patch0 -p1 -b .make
-%patch1 -p1 -b .awk
-%patch2 -p1 -b .string
-%patch3 -p1 -b .fix
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" -f Makefile.dist x11
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/usr/{bin,include,lib,man/man1,man/man3}
+mkdir -p $RPM_BUILD_ROOT{%{_bindir},%{_includedir},%{_libdir}/faces,%{_mandir}/man{1,3}}
 
 make -f Makefile.dist \
-	BINDIR=$RPM_BUILD_ROOT/usr/bin \
-	LIBDIR=$RPM_BUILD_ROOT/usr/lib \
-	MANDIR=$RPM_BUILD_ROOT/usr/man \
+	BINDIR=$RPM_BUILD_ROOT%{_bindir} \
+	LIBDIR=$RPM_BUILD_ROOT%{_libdir} \
+	MANDIR=$RPM_BUILD_ROOT%{_mandir} \
 	install
 
-install -m644 compface/compface.h $RPM_BUILD_ROOT/usr/include/compface.h
+install compface/compface.h $RPM_BUILD_ROOT%{_includedir}/compface.h
 
-mkdir -p $RPM_BUILD_ROOT/usr/lib/faces
+strip --strip-unneeded $RPM_BUILD_ROOT%{_bindir}/* || :
+
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man{1,3}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
-/usr/bin/compface
-/usr/man/man1/compface.1
-/usr/man/man3/compface.3
-/usr/bin/icon2ikon
-/usr/bin/ikon2icon
-/usr/bin/fs2ikon
-/usr/bin/rs2icon
-/usr/bin/fs2xbm
-/usr/bin/xbm2ikon
-/usr/bin/xbmcut48
-/usr/bin/xbmsize48
-/usr/bin/addxface
-/usr/bin/mailq.faces
-/usr/bin/from.faces
-/usr/bin/lpqall.faces
-/usr/bin/rotary.faces
-/usr/bin/facesaddr
-/usr/bin/facesall
-/usr/bin/mkfacesindex
-/usr/bin/newscheck.faces
-/usr/bin/newsfrom.faces
-/usr/bin/faces
-/usr/bin/face_update
-/usr/bin/faces.sendmail
-/usr/man/man1/faces.1
-/usr/man/man1/face_update.1
-/usr/lib/faces
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/compface
+%attr(755,root,root) %{_bindir}/icon2ikon
+%attr(755,root,root) %{_bindir}/ikon2icon
+%attr(755,root,root) %{_bindir}/fs2ikon
+%attr(755,root,root) %{_bindir}/rs2icon
+%attr(755,root,root) %{_bindir}/fs2xbm
+%attr(755,root,root) %{_bindir}/xbm2ikon
+%attr(755,root,root) %{_bindir}/xbmcut48
+%attr(755,root,root) %{_bindir}/xbmsize48
+%attr(755,root,root) %{_bindir}/addxface
+%attr(755,root,root) %{_bindir}/mailq.faces
+%attr(755,root,root) %{_bindir}/from.faces
+%attr(755,root,root) %{_bindir}/lpqall.faces
+%attr(755,root,root) %{_bindir}/rotary.faces
+%attr(755,root,root) %{_bindir}/facesaddr
+%attr(755,root,root) %{_bindir}/facesall
+%attr(755,root,root) %{_bindir}/mkfacesindex
+%attr(755,root,root) %{_bindir}/newscheck.faces
+%attr(755,root,root) %{_bindir}/newsfrom.faces
+%attr(755,root,root) %{_bindir}/faces
+%attr(755,root,root) %{_bindir}/face_update
+%attr(755,root,root) %{_bindir}/faces.sendmail
+%{_libdir}/faces
+%{_mandir}/man1/faces.1.gz
+%{_mandir}/man1/face_update.1.gz
+%{_mandir}/man1/compface.1.gz
+%{_mandir}/man3/compface.3.gz
 
 %files xface
-%defattr(-,root,root)
-/usr/bin/uncompface
-/usr/man/man1/uncompface.1
-/usr/man/man3/uncompface.3
-/usr/bin/ikon2xbm
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/uncompface
+%attr(755,root,root) %{_bindir}/ikon2xbm
+%{_mandir}/man1/uncompface.1.gz
+%{_mandir}/man3/uncompface.3.gz
 
 %files devel
-%defattr(-,root,root)
-/usr/include/compface.h
-/usr/lib/libcompface.a
+%defattr(644,root,root,755)
+%{_includedir}/compface.h
+%{_libdir}/libcompface.a
