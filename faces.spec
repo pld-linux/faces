@@ -4,7 +4,9 @@ Version:	1.6.1
 Release:	17
 Copyright:	freeware
 Group:		Applications/Mail
-Source:		ftp://ftp.cs.indiana.edu/pub/faces/faces/faces-1.6.1.tar.Z
+Group(pl):	Aplikacje/Poczta
+Group(pt):	Aplicações/Correio Eletrônico
+Source0:	ftp://ftp.cs.indiana.edu/pub/faces/faces/%{name}-%{version}.tar.Z
 Patch0:		faces-1.6.1-make.patch
 Patch1:		faces-1.6.1-awk.patch
 Patch2:		faces-1.6.1-string.patch
@@ -15,48 +17,51 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Faces is a program for visually monitoring a list (typically a list of
 incoming mail messages, a list of jobs in a print queue or a list of
-system users).  Faces operates in five different modes: monitoring for
+system users). Faces operates in five different modes: monitoring for
 new mail, monitoring an entire mail file, monitoring a specified print
-queue, monitoring users on a machine and custom monitoring.  Faces also
+queue, monitoring users on a machine and custom monitoring. Faces also
 includes a utility for including a face image (a compressed, scanned
-image) with mail messages.  The image has to be compressed in a certain
-way, which can then be uncompressed and displayed on-the-fly in the mail
-program.  This feature of faces is typically used with the exmh mail
-handling system.
+image) with mail messages. The image has to be compressed in a certain
+way, which can then be uncompressed and displayed on-the-fly in the
+mail program. This feature of faces is typically used with the exmh
+mail handling system.
 
-Install faces if you'd like to use its list monitoring capability or its
-face image inclusion capability.  If you would like to include face
-images in email, you'll also need to install the faces-xface package.  If
-you would like to develop xface applications, you'll need to also install
-faces-devel.
+Install faces if you'd like to use its list monitoring capability or
+its face image inclusion capability. If you would like to include face
+images in email, you'll also need to install the faces-xface package.
+If you would like to develop xface applications, you'll need to also
+install faces-devel.
 
 %description -l pl
-faces jest programem s³u¿±cym do wizualnego monitorowania listy (zazwyczaj 
-jest to lista nadchodz±cych wiadomo¶ci, lista zadañ w kolejce drukowania
-czy lista u¿ytkowników systemu). Faces dzia³a w kilku ró¿nych trybach:
-nadzoruj±c nadchodz±c± pocztê, nadzoruj±c ca³y plik pocztowy, nadzoruj±c
-podan± kolejkê drukowania, nadzoruj±c u¿ytkowników na danym komputerze oraz
-wykonuj±c inne, wyszczególnione czynno¶ci nadzoruj±ce. Pakiet faces zawiera 
-równie¿ narzêdzie s³u¿±ce do do³±czania (zeskanowanego, skompresowanego) 
-wizerunku twarzy w wiadomo¶ciach pocztowych. Obrazek ten powinien byæ 
-skopmresowany w szczególny sposób, dziêki czemu bêdzie móg³ zostaæ
-zdekompresowany i wy¶wietlony w locie przez program pocztowy. Ta funkcja jest
-zazwyczaj wykorzystywana w systemie obs³ugi poczty exmh.
+faces jest programem s³u¿±cym do wizualnego monitorowania listy
+(zazwyczaj jest to lista nadchodz±cych wiadomo¶ci, lista zadañ w
+kolejce drukowania czy lista u¿ytkowników systemu). Faces dzia³a w
+kilku ró¿nych trybach: nadzoruj±c nadchodz±c± pocztê, nadzoruj±c ca³y
+plik pocztowy, nadzoruj±c podan± kolejkê drukowania, nadzoruj±c
+u¿ytkowników na danym komputerze oraz wykonuj±c inne, wyszczególnione
+czynno¶ci nadzoruj±ce. Pakiet faces zawiera równie¿ narzêdzie s³u¿±ce
+do do³±czania (zeskanowanego, skompresowanego) wizerunku twarzy w
+wiadomo¶ciach pocztowych. Obrazek ten powinien byæ skopmresowany w
+szczególny sposób, dziêki czemu bêdzie móg³ zostaæ zdekompresowany i
+wy¶wietlony w locie przez program pocztowy. Ta funkcja jest zazwyczaj
+wykorzystywana w systemie obs³ugi poczty exmh.
 
-Nalezy zainstalowaæ faces je¶li pragnie siê wykorzystaæ zdolno¶æ nadzorowania
-list bêd±c± cech± tego pakietu. Je¶li chce siê do³±czaæ wizerunki twarzy w
-wiadomo¶ciach poczty elektronicznej, trzeba bêdzie równie¿ zainstalowaæ
-pakiet faces-xface. Je¶li pragnie siê pisaæ aplikacje dla xface, nale¿y 
-dodatkowo zainstalowaæ pakiet faces-devel.
+Nalezy zainstalowaæ faces je¶li pragnie siê wykorzystaæ zdolno¶æ
+nadzorowania list bêd±c± cech± tego pakietu. Je¶li chce siê do³±czaæ
+wizerunki twarzy w wiadomo¶ciach poczty elektronicznej, trzeba bêdzie
+równie¿ zainstalowaæ pakiet faces-xface. Je¶li pragnie siê pisaæ
+aplikacje dla xface, nale¿y dodatkowo zainstalowaæ pakiet faces-devel.
 
 %package xface
 Requires:	libgr-progs
 Summary:	Utilities needed by mailers for handling Faces' X-face images.
 Group:		Applications/Mail
+Group(pl):	Aplikacje/Poczta
+Group(pt):	Aplicações/Correio Eletrônico
 
 %description xface
-Faces-xface includes the utilities that mail user agent programs need to
-handle X-Face mail headers.  When an email program reads the X-face
+Faces-xface includes the utilities that mail user agent programs need
+to handle X-Face mail headers. When an email program reads the X-face
 header line in an email message, it calls these utilities to display
 the face image included in the message.
 
@@ -66,13 +71,15 @@ display Faces' X-face images.
 %package devel
 Summary:	The Faces program's library and header files.
 Group:		Development/Libraries
+Group(fr):	Development/Librairies
+Group(pl):	Programowanie/Biblioteki
 
 %description devel
-Faces-devel contains the faces program development environment,
-(i.e., the static libraries and header files).
+Faces-devel contains the faces program development environment, (i.e.,
+the static libraries and header files).
 
 If you want to develop Faces applications, you'll need to install
-faces-devel.  You'll also need to install the faces package.
+faces-devel. You'll also need to install the faces package.
 
 %prep
 %setup -q -n faces
@@ -86,7 +93,7 @@ make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" -f Makefile.dist x11
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT{%{_bindir},%{_includedir},%{_libdir}/faces,%{_mandir}/man{1,3}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_includedir},%{_libdir}/faces,%{_mandir}/man{1,3}}
 
 make -f Makefile.dist \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir} \
