@@ -151,7 +151,7 @@ ve baþlýk dosyalarýný içerir.
 %build
 bison address.y -o address.c
 
-%{__make} RPM_OPT_FLAGS="%{rpmcflags}" -f Makefile.dist x11
+%{__make} RPM_OPT_FLAGS="%{rpmcflags} -L/usr/X11R6/%{_lib}" -f Makefile.dist x11
 
 %install
 rm -rf $RPM_BUILD_ROOT
