@@ -8,9 +8,6 @@ Version:	1.6.1
 Release:	18
 License:	Freeware
 Group:		Applications/Mail
-Group(de):	Applikationen/Post
-Group(pl):	Aplikacje/Poczta
-Group(pt):	Aplicações/Correio Eletrônico
 Source0:	ftp://ftp.cs.indiana.edu/pub/faces/faces/%{name}-%{version}.tar.Z
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-awk.patch
@@ -83,9 +80,6 @@ Summary(fr):	Utilitaires pour gérer les en-têtes X-Face
 Summary(pl):	Narzêdzia potrzebne programom pocztowym do obs³ugi nag³ówków X-Face
 Summary(tr):	X-Face başlıklarını işleme araçları
 Group:		Applications/Mail
-Group(de):	Applikationen/Post
-Group(pl):	Aplikacje/Poczta
-Group(pt):	Aplicações/Correio Eletrônico
 Requires:	netpbm-progs
 
 %description xface
@@ -122,13 +116,6 @@ Summary(fr):	Bibliothèque et en-tête Face saver
 Summary(pl):	Biblioteka statyczna i plik nag³ówkowy faces
 Summary(tr):	Face sunucu kitaplığı ve başlıkları
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
-Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
 
 %description devel
 Faces-devel contains the faces program development environment, (i.e.,
