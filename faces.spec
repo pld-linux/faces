@@ -140,7 +140,7 @@ ve baþlýk dosyalarýný içerir.
 %patch3 -p1
 
 %build
-%{__make} RPM_OPT_FLAGS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}" -f Makefile.dist x11
+%{__make} RPM_OPT_FLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}" -f Makefile.dist x11
 
 %install
 rm -rf $RPM_BUILD_ROOT
