@@ -8,7 +8,9 @@ Version:	1.6.1
 Release:	18
 License:	Freeware
 Group:		Applications/Mail
-Source0:	ftp://ftp.cs.indiana.edu/pub/faces/faces/%{name}-%{version}.tar.Z
+# this file differs from the one from CVS
+#Source0:	ftp://ftp.cs.indiana.edu/pub/faces/faces/%{name}-%{version}.tar.Z
+Source0:	%{name}-%{version}.tar.Z
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-awk.patch
 Patch2:		%{name}-string.patch
