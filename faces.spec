@@ -141,7 +141,7 @@ Bu paket, xface geliþtirme ortamýný sunar. Gerekli statik kitaplýklarý
 ve baþlýk dosyalarýný içerir.
 
 %prep
-%setup -q -n faces
+%setup -q -n %{name}
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
@@ -202,7 +202,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/uncompface
 %attr(755,root,root) %{_bindir}/ikon2xbm
-%{_mandir}/man1/uncompface.1.*
+%{_mandir}/man1/uncompface.1*
 %{_mandir}/man3/*
 
 %files devel
