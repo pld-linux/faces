@@ -1,3 +1,5 @@
+# TODO
+# - devel collides with compface-devel
 Summary:	A list monitor with a visual output
 Summary(de):	Face Saver Datenbank-Tools
 Summary(fr):	Outils pour la base de données de sauvegarde des aspects
