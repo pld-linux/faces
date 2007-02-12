@@ -1,10 +1,10 @@
 # TODO
 # - devel collides with compface-devel
 Summary:	A list monitor with a visual output
-Summary(de.UTF-8):   Face Saver Datenbank-Tools
-Summary(fr.UTF-8):   Outils pour la base de données de sauvegarde des aspects
-Summary(pl.UTF-8):   Program do wizualnego monitorowania listy
-Summary(tr.UTF-8):   Yüz (face) sunucusu veri tabanı araçları
+Summary(de.UTF-8):	Face Saver Datenbank-Tools
+Summary(fr.UTF-8):	Outils pour la base de données de sauvegarde des aspects
+Summary(pl.UTF-8):	Program do wizualnego monitorowania listy
+Summary(tr.UTF-8):	Yüz (face) sunucusu veri tabanı araçları
 Name:		faces
 Version:	1.6.1
 Release:	20
@@ -81,10 +81,10 @@ yazılımlarında belirmesini sağlayabilirsiniz.
 
 %package xface
 Summary:	Utilities needed by mailers for handling Faces' X-face images
-Summary(de.UTF-8):   Utilities zur Behandlung von X-Face-Headers
-Summary(fr.UTF-8):   Utilitaires pour gérer les en-têtes X-Face
-Summary(pl.UTF-8):   Narzędzia potrzebne programom pocztowym do obsługi nagłówków X-Face
-Summary(tr.UTF-8):   X-Face başlıklarını işleme araçları
+Summary(de.UTF-8):	Utilities zur Behandlung von X-Face-Headers
+Summary(fr.UTF-8):	Utilitaires pour gérer les en-têtes X-Face
+Summary(pl.UTF-8):	Narzędzia potrzebne programom pocztowym do obsługi nagłówków X-Face
+Summary(tr.UTF-8):	X-Face başlıklarını işleme araçları
 Group:		Applications/Mail
 Requires:	netpbm-progs
 
@@ -117,10 +117,10 @@ okuyucuları kullanır.
 
 %package devel
 Summary:	The Faces program's library and header files
-Summary(de.UTF-8):   Face-Saver-Library und Header
-Summary(fr.UTF-8):   Bibliothèque et en-tête Face saver
-Summary(pl.UTF-8):   Biblioteka statyczna i plik nagłówkowy faces
-Summary(tr.UTF-8):   Face sunucu kitaplığı ve başlıkları
+Summary(de.UTF-8):	Face-Saver-Library und Header
+Summary(fr.UTF-8):	Bibliothèque et en-tête Face saver
+Summary(pl.UTF-8):	Biblioteka statyczna i plik nagłówkowy faces
+Summary(tr.UTF-8):	Face sunucu kitaplığı ve başlıkları
 Group:		Development/Libraries
 
 %description devel
