@@ -1,10 +1,10 @@
 # TODO
 # - devel collides with compface-devel
 Summary:	A list monitor with a visual output
-Summary(de):	Face Saver Datenbank-Tools
-Summary(fr):	Outils pour la base de données de sauvegarde des aspects
-Summary(pl):	Program do wizualnego monitorowania listy
-Summary(tr):	Yüz (face) sunucusu veri tabanı araçları
+Summary(de.UTF-8):   Face Saver Datenbank-Tools
+Summary(fr.UTF-8):   Outils pour la base de donnÃ©es de sauvegarde des aspects
+Summary(pl.UTF-8):   Program do wizualnego monitorowania listy
+Summary(tr.UTF-8):   YÃ¼z (face) sunucusu veri tabanÄ± araÃ§larÄ±
 Name:		faces
 Version:	1.6.1
 Release:	20
@@ -42,49 +42,49 @@ images in email, you'll also need to install the faces-xface package.
 If you would like to develop xface applications, you'll need to also
 install faces-devel.
 
-%description -l de
-Das faces-Paket ist vor allem für exmh gedacht. Sie können ein
+%description -l de.UTF-8
+Das faces-Paket ist vor allem fÃ¼r exmh gedacht. Sie kÃ¶nnen ein
 beliebiges Foto in ein 'face' verwandeln, das dann per E-Mail
-übertragen wird und von exmh und anderen Mail-Programmen erscheint.
+Ã¼bertragen wird und von exmh und anderen Mail-Programmen erscheint.
 
-%description -l fr
-Le package faces est principalement utilisé avec exmh. Vous pouvez
+%description -l fr.UTF-8
+Le package faces est principalement utilisÃ© avec exmh. Vous pouvez
 prendre une photo de quelque chose et le transformer en une ``face''
-qui peut être transmise dans tous les courriers élctroniques et sera
+qui peut Ãªtre transmise dans tous les courriers Ã©lctroniques et sera
 visible dans exmh et les autres mailers.
 
-%description -l pl
-faces jest programem s³u¿±cym do wizualnego monitorowania listy
-(zazwyczaj jest to lista nadchodz±cych wiadomo¶ci, lista zadañ w
-kolejce drukowania czy lista u¿ytkowników systemu). Faces dzia³a w
-kilku ró¿nych trybach: nadzoruj±c nadchodz±c± pocztê, nadzoruj±c ca³y
-plik pocztowy, nadzoruj±c podan± kolejkê drukowania, nadzoruj±c
-u¿ytkowników na danym komputerze oraz wykonuj±c inne, wyszczególnione
-czynno¶ci nadzoruj±ce. Pakiet faces zawiera równie¿ narzêdzie s³u¿±ce
-do do³±czania (zeskanowanego, skompresowanego) wizerunku twarzy w
-wiadomo¶ciach pocztowych. Obrazek ten powinien byæ skompresowany w
-szczególny sposób, dziêki czemu bêdzie móg³ zostaæ zdekompresowany i
-wy¶wietlony w locie przez program pocztowy. Ta funkcja jest zazwyczaj
-wykorzystywana w systemie obs³ugi poczty exmh.
+%description -l pl.UTF-8
+faces jest programem sÅ‚uÅ¼Ä…cym do wizualnego monitorowania listy
+(zazwyczaj jest to lista nadchodzÄ…cych wiadomoÅ›ci, lista zadaÅ„ w
+kolejce drukowania czy lista uÅ¼ytkownikÃ³w systemu). Faces dziaÅ‚a w
+kilku rÃ³Å¼nych trybach: nadzorujÄ…c nadchodzÄ…cÄ… pocztÄ™, nadzorujÄ…c caÅ‚y
+plik pocztowy, nadzorujÄ…c podanÄ… kolejkÄ™ drukowania, nadzorujÄ…c
+uÅ¼ytkownikÃ³w na danym komputerze oraz wykonujÄ…c inne, wyszczegÃ³lnione
+czynnoÅ›ci nadzorujÄ…ce. Pakiet faces zawiera rÃ³wnieÅ¼ narzÄ™dzie sÅ‚uÅ¼Ä…ce
+do doÅ‚Ä…czania (zeskanowanego, skompresowanego) wizerunku twarzy w
+wiadomoÅ›ciach pocztowych. Obrazek ten powinien byÄ‡ skompresowany w
+szczegÃ³lny sposÃ³b, dziÄ™ki czemu bÄ™dzie mÃ³gÅ‚ zostaÄ‡ zdekompresowany i
+wyÅ›wietlony w locie przez program pocztowy. Ta funkcja jest zazwyczaj
+wykorzystywana w systemie obsÅ‚ugi poczty exmh.
 
-Nale¿y zainstalowaæ faces je¶li pragnie siê wykorzystaæ zdolno¶æ
-nadzorowania list bêd±c± cech± tego pakietu. Je¶li chce siê do³±czaæ
-wizerunki twarzy w wiadomo¶ciach poczty elektronicznej, trzeba bêdzie
-równie¿ zainstalowaæ pakiet faces-xface. Je¶li pragnie siê pisaæ
-aplikacje dla xface, nale¿y dodatkowo zainstalowaæ pakiet faces-devel.
+NaleÅ¼y zainstalowaÄ‡ faces jeÅ›li pragnie siÄ™ wykorzystaÄ‡ zdolnoÅ›Ä‡
+nadzorowania list bÄ™dÄ…cÄ… cechÄ… tego pakietu. JeÅ›li chce siÄ™ doÅ‚Ä…czaÄ‡
+wizerunki twarzy w wiadomoÅ›ciach poczty elektronicznej, trzeba bÄ™dzie
+rÃ³wnieÅ¼ zainstalowaÄ‡ pakiet faces-xface. JeÅ›li pragnie siÄ™ pisaÄ‡
+aplikacje dla xface, naleÅ¼y dodatkowo zainstalowaÄ‡ pakiet faces-devel.
 
-%description -l tr
-Faces paketi daha çok exmh yazılımı ile kullanılmak için
-hazırlanmıştır. Herhangi bir görüntüyü bir 'yüz'e çevirebilir ve bunu
-mektuplara ekleyerek exmh ve benzeri yazılımlar kullanan mektup okuma
-yazılımlarında belirmesini sağlayabilirsiniz.
+%description -l tr.UTF-8
+Faces paketi daha Ã§ok exmh yazÄ±lÄ±mÄ± ile kullanÄ±lmak iÃ§in
+hazÄ±rlanmÄ±ÅŸtÄ±r. Herhangi bir gÃ¶rÃ¼ntÃ¼yÃ¼ bir 'yÃ¼z'e Ã§evirebilir ve bunu
+mektuplara ekleyerek exmh ve benzeri yazÄ±lÄ±mlar kullanan mektup okuma
+yazÄ±lÄ±mlarÄ±nda belirmesini saÄŸlayabilirsiniz.
 
 %package xface
 Summary:	Utilities needed by mailers for handling Faces' X-face images
-Summary(de):	Utilities zur Behandlung von X-Face-Headers
-Summary(fr):	Utilitaires pour gérer les en-têtes X-Face
-Summary(pl):	Narzêdzia potrzebne programom pocztowym do obs³ugi nag³ówków X-Face
-Summary(tr):	X-Face başlıklarını işleme araçları
+Summary(de.UTF-8):   Utilities zur Behandlung von X-Face-Headers
+Summary(fr.UTF-8):   Utilitaires pour gÃ©rer les en-tÃªtes X-Face
+Summary(pl.UTF-8):   NarzÄ™dzia potrzebne programom pocztowym do obsÅ‚ugi nagÅ‚Ã³wkÃ³w X-Face
+Summary(tr.UTF-8):   X-Face baÅŸlÄ±klarÄ±nÄ± iÅŸleme araÃ§larÄ±
 Group:		Applications/Mail
 Requires:	netpbm-progs
 
@@ -94,53 +94,53 @@ to handle X-Face mail headers. When an email program reads the X-face
 header line in an email message, it calls these utilities to display
 the face image included in the message.
 
-%description xface -l de
+%description xface -l de.UTF-8
 Dies sind Dienstprogramme zum Verarbeiten von X-Face-Mail-Headern. Sie
 werden von Mail-Programmen aufgerufen, um ein 'Face' einer Nachricht
 darzustellen.
 
-%description xface -l fr
-Ce sont des utilitaires pour prendre en charge des en-tête de mail X.
-il sont appelés par les lecteurs de mail pour affciher ces parties de
+%description xface -l fr.UTF-8
+Ce sont des utilitaires pour prendre en charge des en-tÃªte de mail X.
+il sont appelÃ©s par les lecteurs de mail pour affciher ces parties de
 message.
 
-%description xface -l pl
-Pakiet faces-xface zawiera narzêdzia potrzebne programom pocztowym do
-wy¶wietlania obrazków zawartych w nag³ówkach X-Face. Kiedy program
-pocztowy czyta z nag³ówka liniê X-Face, uruchamia te narzêdzia ¿eby
-wy¶wietliæ obrazek zawarty w nag³ówku.
+%description xface -l pl.UTF-8
+Pakiet faces-xface zawiera narzÄ™dzia potrzebne programom pocztowym do
+wyÅ›wietlania obrazkÃ³w zawartych w nagÅ‚Ã³wkach X-Face. Kiedy program
+pocztowy czyta z nagÅ‚Ã³wka liniÄ™ X-Face, uruchamia te narzÄ™dzia Å¼eby
+wyÅ›wietliÄ‡ obrazek zawarty w nagÅ‚Ã³wku.
 
-%description xface -l tr
-Bu paket. X-Face mektup başlıklarını işleyen araçları içerir. Bu
-araçları, bir mesajdaki bir yüzü görüntülemek isteyen e-posta
-okuyucuları kullanır.
+%description xface -l tr.UTF-8
+Bu paket. X-Face mektup baÅŸlÄ±klarÄ±nÄ± iÅŸleyen araÃ§larÄ± iÃ§erir. Bu
+araÃ§larÄ±, bir mesajdaki bir yÃ¼zÃ¼ gÃ¶rÃ¼ntÃ¼lemek isteyen e-posta
+okuyucularÄ± kullanÄ±r.
 
 %package devel
 Summary:	The Faces program's library and header files
-Summary(de):	Face-Saver-Library und Header
-Summary(fr):	Bibliothèque et en-tête Face saver
-Summary(pl):	Biblioteka statyczna i plik nag³ówkowy faces
-Summary(tr):	Face sunucu kitaplığı ve başlıkları
+Summary(de.UTF-8):   Face-Saver-Library und Header
+Summary(fr.UTF-8):   BibliothÃ¨que et en-tÃªte Face saver
+Summary(pl.UTF-8):   Biblioteka statyczna i plik nagÅ‚Ã³wkowy faces
+Summary(tr.UTF-8):   Face sunucu kitaplÄ±ÄŸÄ± ve baÅŸlÄ±klarÄ±
 Group:		Development/Libraries
 
 %description devel
 Faces-devel contains the faces program development environment, (i.e.,
 the static libraries and header files).
 
-%description devel -l de
-Dies ist die xface-Entwicklungsumgebung. Sie enthält die statischen
-Libraries und die Header-Dateien für xface-Entwicklungsarbeiten.
+%description devel -l de.UTF-8
+Dies ist die xface-Entwicklungsumgebung. Sie enthÃ¤lt die statischen
+Libraries und die Header-Dateien fÃ¼r xface-Entwicklungsarbeiten.
 
-%description devel -l fr
-Environnement de développement xface. Contient les bibliothèques et
-fichiers en-têtes pour faire du développement xface.
+%description devel -l fr.UTF-8
+Environnement de dÃ©veloppement xface. Contient les bibliothÃ¨ques et
+fichiers en-tÃªtes pour faire du dÃ©veloppement xface.
 
-%description devel -l pl
-Pakiet zawiera plik nag³ówkowy oraz bibliotekê statyczn±.
+%description devel -l pl.UTF-8
+Pakiet zawiera plik nagÅ‚Ã³wkowy oraz bibliotekÄ™ statycznÄ….
 
-%description devel -l tr
-Bu paket, xface geliştirme ortamını sunar. Gerekli statik kitaplıkları
-ve başlık dosyalarını içerir.
+%description devel -l tr.UTF-8
+Bu paket, xface geliÅŸtirme ortamÄ±nÄ± sunar. Gerekli statik kitaplÄ±klarÄ±
+ve baÅŸlÄ±k dosyalarÄ±nÄ± iÃ§erir.
 
 %prep
 %setup -q -n %{name}
